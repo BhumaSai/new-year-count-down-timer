@@ -13,11 +13,11 @@ let year = document.getElementById('head')
 
 // year days calculation code
 let completedDays 
-let totalDays = new Date().getFullYear() % 4==0? 12*30+6:12*30+5;
+let totalDays = new Date().getFullYear() % 4==0? 12*30+5:12*30+4;
 let leapY = new Date().getFullYear() % 4==0?29:28
    switch (new Date().getMonth()) {
       case 0:
-         completedDays = 1*31-new Date().getDate()
+         completedDays = 31-(31-new Date().getDate())
          break;
       case 1:
          completedDays =(2*30-1)-(leapY-new Date().getDate())
